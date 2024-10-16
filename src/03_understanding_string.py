@@ -77,34 +77,26 @@ print(message)
     un mensaje de bienvenida a esa persona, ejemplo de la salida :
     " Hola Charly, ¿te gustaría aprender algo más sobre python?"
 """
-persona_name = "Charly Mercury"
-message = " ¿te gustaría aprender algo más sobre python?"
-print(" Hola " + persona_name + message)
+
 """ 
     2. Guarda el nombre de una persona en una variable e imprime
     su nombre en minúsculas, mayúsculas y utilizando el método title.
 """ 
-print(persona_name.lower())
-print(persona_name.upper())
-print(persona_name.title())
+
+
 """ 
     3. Encuentra una cita de alguna persona famosa. Imprime la cita
     y el nombre del autor. Por ejemplo:
     "Charly Mercury una vez dijo, 'Python is love'"
 """ 
-message_quote = "Charly Mercury una vez dijo, 'Python is love'"
-print(message_quote)
+
+
 """     
     4. Repite el ejercicio anterior, pero ahora almacena el nombre
     de la persona famosa en una variable famous_person. Ahora
     crea la variable para la cita e imprime el mensaje.
 """ 
-famous_person = "Charly Mercury"
-quote = "'Python is love'"
-print(famous_person+" una vez dijo, "+quote)
-print("**************************")
-message = f"{famous_person} una vez dijo {quote}"
-print(message)
+
 """ 
     5. Guarda el nombre de una persona en una variable,
     agrega espacios, 
