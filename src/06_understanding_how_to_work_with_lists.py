@@ -127,3 +127,71 @@ print(squares_2)
 """
 
 
+## SLICING O SLICE
+players = ['charly', 'doria', 'jose maria', 'valente', 'puga']
+print(players[0:3])
+print(players[1:4])
+print(players[:4])
+print(players[2:])
+print(players[-3:])
+
+## Slicing en un for
+players = ['charly', 'doria', 'jose maria', 'valente', 'puga']
+print("Aquí se presentan los primeros 3 alumnos")
+for player in players[0:3]:
+    print(player)
+
+## Copia de listas
+my_food = ['chilaquiles', 'flatuas de desebrada', 'enfrijoladas']
+dorias_favorite_food = my_food[:]
+dorias_favorite_food_2 = list(my_food)
+dorias_favorite_food_3 = my_food.copy()
+my_food.append('sopes')
+print(my_food)
+print(dorias_favorite_food)
+
+"""
+    Ejercicios: 
+    
+        1. Rebanadas: Usa uno de los programas que escribiste en el ejercicio 
+            anterior, agrega varias líneas al final del programa que hagan lo siguiente:
+            
+            - Imprime el mensaje: Los primeros tres elementos en la lista son: 
+                Luego usa una rebanada (slice) para imprimir los primeros tres 
+                elementos de la lista de ese programa.
+            - Imprime el mensaje: Tres elementos del medio de la lista son: 
+                Usa una rebanada para imprimir tres elementos del medio de la lista.
+            - Imprime el mensaje: Los últimos tres elementos de la lista son: 
+                Usa una rebanada para imprimir los últimos tres elementos de la lista.
+        
+        2. Mis Pizzas, Tus Pizzas: Comienza con tu programa del Ejercicio de las pizzas. 
+        Haz una copia de la lista de pizzas y llámala friend_pizzas. Luego, haz lo siguiente:
+
+            - Agrega una nueva pizza a la lista original.
+            - Agrega una pizza diferente a la lista friend_pizzas.
+            - Demuestra que tienes dos listas separadas. 
+                - Imprime el mensaje: Mis pizzas favoritas son:, y luego usa un bucle 
+                    for para imprimir la primera lista. 
+                - Imprime el mensaje: Las pizzas favoritas de mi amigo son:, y luego usa 
+                    un bucle for para imprimir la segunda lista. Asegúrate de que cada 
+                    nueva pizza esté almacenada en la lista correspondiente.
+
+"""
+
+
+## TUPLAS
+# Las tuplas son listas de elemntos que no cambian de tamaños. 
+# Las tuplas son listas inmutables
+# Se utilizan los () para definir una tupla.
+dimensions = (200, 500)
+
+print(dimensions)
+
+print(dimensions[0])
+print(dimensions[1])
+
+for dimension in dimensions:
+    print(dimension)
+    
+dimensions = (250, 500)
+print(dimensions)
