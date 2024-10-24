@@ -63,56 +63,57 @@ print("Don Charly")
         <= 18 -> paga $200
         mayor de 18 -> $500
 """
-age = 40
+age = 3
 if age <= 4:
     price = 0
-elif age <= 18:
+elif age<=18:
     price = 200
-elif age <= 50:
+elif age <65:
     price = 500
-elif age > 50: 
+elif age >= 65: 
     price = 100
-    
-print(f"Tu pagas {price} pesos.")
 
+print(f" Tu entrada cuesta ${price} ")
 
-### Multiple conditions
+### If statement 
+
 guisos = ['deshebrada', 'salsa verde']
 if 'deshebrada' in guisos:
-    print('Hay deshebrada')
-elif 'salsa verde' in guisos:
-    print('Hay salsa verde')
+    print("Hay deshebrada")
+if 'salsa verde' in guisos:
+    print("Hay salsa verde")
+if 'picadillo' in guisos:
+    print("Hay picadillo")
+print("Éstos son los guisos")
+
+## Differences between elif and if
+
+guisos = ['salsa verde', 'deshebrada']
+if 'picadillo' in guisos:
+    print("Hay Salsa verde")
 elif 'picadillo' in guisos:
-    print('Hay picadillo')
-    
-print("Éstos guisos hay")
-print()
-
-print()
-
-
-#### Listas Vacías
-
-
-if guisos:
-    print("Tengos guisos") 
+    print("Hay deshebrada")
+elif 'chicharron' in guisos:
+    print("Hay chicharron")  
 else:
-    print("No hay guisos")
+    print("No hay ningún guiso")  
     
+
+# Empty List
+guisos = []
+if guisos:
+    print("Hay elementos")
+else:
+    print("No hay elementos")
     
-####
-guisos_availables = ['salsa verde', 'deshebrada', 'picadillo',
-                   'huevo chorizo']
 
-guisos_to_order = ['barbacoa', 'deshebrada', 'cabrito', 'picadillo']
-
-print("¿Qué desea ordenar?")
-
-for guiso in guisos_to_order:
-    if guiso in guisos_availables:
-        print(f"Si tenemos {guiso}")
-    else: 
-        print(f"No tenemos {guiso}")
-
-print("Realizar Pedido")
-
+# 
+guisos_disponibles = ['salsa verde', 'deshebrada', 
+                      'picadillo', 'huevo con chorizo']
+guisos_a_ordenar = ['chicharron', 'deshebrada', 'huevo con chorizo']
+print("¿Qué guiso desea ordenar?")
+for guiso in guisos_a_ordenar:
+    if guiso in guisos_disponibles:
+        print(f"Si tengo ese guiso: {guiso}")
+    else:
+        print(f"No tengo ese guiso: {guiso}")
