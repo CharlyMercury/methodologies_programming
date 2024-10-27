@@ -31,16 +31,15 @@ print("Gracias a todos lo magos, fue un gran espectáculo")
         a) Imprime un mismo mensaje para cada animal, por ejemplo: " un perro
         sería una gran mascota. "
         
-        b) Agrega un elemento al final de tu programa e imprímelo, por ejemplo: 
-        " Todos éstos animales serían una gran mascota" 
+        b) Agrega un elemento al final de tu programa e imprímelo, 
+        por ejemplo: " Todos éstos animales serían una gran mascota" 
 
 """
 
 """
-    La listas también pueden almacenar números y son ideales para almacenarlos.
-    Python ofrece cantidades de herramientas que ayudan a trabajar eficientemente con
-    listas de números.
-
+    La listas también pueden almacenar números y son ideales para 
+    almacenarlos. Python ofrece cantidades de herramientas que ayudan a 
+    trabajar eficientemente con listas de números.
 """
 
 # Método built-in Range()
@@ -122,14 +121,15 @@ print(squares_2)
             Por ejemplo, el cubo de 2 se escribe en Python 2**3. Crea
             una lista con los primeros 10 cubos (1^3, 2^3, 3^3, ... , 10^3).
             Utiliza un for para imprimir los valores de la lista.
-        7. Utiliza una list comprehension para generar una lista de los primeros
-        20 cubos. Utiliza un for para imprimir los valores de la lista.
+        7. Utiliza una list comprehension para generar una lista de los 
+            primeros 20 cubos. Utiliza un for para imprimir los valores de 
+            la lista.
 """
 
 
 ## SLICING O SLICE
 players = ['charly', 'doria', 'jose maria', 'valente', 'puga']
-print(players[0:3])
+print(players[0:3]) 
 print(players[1:4])
 print(players[:4])
 print(players[2:])
@@ -153,28 +153,33 @@ print(dorias_favorite_food)
 """
     Ejercicios: 
     
-        1. Rebanadas: Usa uno de los programas que escribiste en el ejercicio 
-            anterior, agrega varias líneas al final del programa que hagan lo siguiente:
+        1. Rebanadas: Usa uno de los programas que escribiste en el ejercicio
+            anterior, agrega varias líneas al final del programa que hagan lo
+            siguiente:
             
-            - Imprime el mensaje: Los primeros tres elementos en la lista son: 
-                Luego usa una rebanada (slice) para imprimir los primeros tres 
-                elementos de la lista de ese programa.
-            - Imprime el mensaje: Tres elementos del medio de la lista son: 
-                Usa una rebanada para imprimir tres elementos del medio de la lista.
-            - Imprime el mensaje: Los últimos tres elementos de la lista son: 
-                Usa una rebanada para imprimir los últimos tres elementos de la lista.
+            - Imprime el mensaje: Los primeros tres elementos en la lista
+                son: Luego usa una rebanada (slice) para imprimir los primeros
+                tres elementos de la lista de ese programa.
+            - Imprime el mensaje: Tres elementos del medio de la lista son:
+                Usa una rebanada para imprimir tres elementos del medio de
+                la lista.
+            - Imprime el mensaje: Los últimos tres elementos de la lista son:
+                Usa una rebanada para imprimir los últimos tres elementos de
+                la lista.
         
-        2. Mis Pizzas, Tus Pizzas: Comienza con tu programa del Ejercicio de las pizzas. 
-        Haz una copia de la lista de pizzas y llámala friend_pizzas. Luego, haz lo siguiente:
+        2. Mis Pizzas, Tus Pizzas: Comienza con tu programa del Ejercicio de
+            las pizzas. Haz una copia de la lista de pizzas y llámala
+            friend_pizzas. Luego, haz lo siguiente:
 
             - Agrega una nueva pizza a la lista original.
             - Agrega una pizza diferente a la lista friend_pizzas.
-            - Demuestra que tienes dos listas separadas. 
-                - Imprime el mensaje: Mis pizzas favoritas son:, y luego usa un bucle 
-                    for para imprimir la primera lista. 
-                - Imprime el mensaje: Las pizzas favoritas de mi amigo son:, y luego usa 
-                    un bucle for para imprimir la segunda lista. Asegúrate de que cada 
-                    nueva pizza esté almacenada en la lista correspondiente.
+            - Demuestra que tienes dos listas separadas.
+                - Imprime el mensaje: Mis pizzas favoritas son:, y luego usa
+                    un bucle for para imprimir la primera lista.
+                - Imprime el mensaje: Las pizzas favoritas de mi amigo son:
+                    y luego usa un bucle for para imprimir la segunda lista.
+                    Asegúrate de que cada nueva pizza esté almacenada en la
+                    lista correspondiente.
 
 """
 
@@ -195,3 +200,21 @@ for dimension in dimensions:
     
 dimensions = (250, 500)
 print(dimensions)
+
+
+"""
+
+    Buffet: Un restaurante "estilo buffet" ofrece solo cinco alimentos 
+        básicos. Piensa en cinco alimentos simples y guárdalos en una 
+        tupla.
+
+    - Usa un bucle for para imprimir cada alimento que el restaurante 
+        ofrece.
+    - Intenta modificar uno de los elementos y asegúrate de que Python 
+        rechace el cambio.
+    - El restaurante cambia su menú, reemplazando dos de los elementos 
+        con alimentos diferentes. Agrega un bloque de código que reescriba
+        la tupla, y luego usa un bucle for para imprimir cada uno de los 
+        elementos del menú revisado.
+
+"""

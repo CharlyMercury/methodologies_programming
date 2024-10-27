@@ -5,10 +5,11 @@
 """
 # How to access to a dictionary element
 covenant_elite = {'color': "blue", 'points': 10}
+print(covenant_elite)
+
 print(covenant_elite['color'])
 print(covenant_elite['points'])
 
-print(covenant_elite)
 
 # How to add elements to a dictionary
 covenant_elite['x-position'] = 0
@@ -22,17 +23,18 @@ print(type(covenant_grunt))
 
 covenant_grunt['color'] = 'orange'
 covenant_grunt['points'] = 1
+print("Covenan Grunt", covenant_grunt)
 
-print(covenant_grunt)
 covenant_grunt['points'] = 5
-
-print(covenant_grunt)
+print("Covenan Grunt", covenant_grunt)
 
 del covenant_grunt['points']
+print(covenant_grunt)
+
 
 covenant_grunt['x-position'] = 5
 covenant_grunt['y-position'] = 25
-covenant_grunt['speed'] = 'slow'
+covenant_grunt['speed'] = 'medium'
 
 print(covenant_grunt)
 
@@ -49,20 +51,22 @@ print(covenant_grunt)
 
 
 programming_lenguages = {
-    'alan': 'python',
-    'valente': 'c++',
-    'ariel': 'c',
-    'yepez': 'Python',
+    'enoc': 'c+',
+    'eliel': 'c++',
+    'fatima': 'escalera',
+    'alexandra': 'python',
+    'karim': 'java',
+    'griselda': 'python',
 }
-print(programming_lenguages['valente'].title())
+print(programming_lenguages['enoc'].title())
 
-for nombre, lenguage in programming_lenguages.items():
-    print(f"{nombre.title()} le gusta el lenguage: ", lenguage)
+for key, value in programming_lenguages.items():
+    print(f"{key.title()} le gusta el lenguage:", value)
 
 """
     Keys
 """
-friends = ['ariel', 'yepez', 'alan', 'valente']
+friends = ['enoc', 'eliel']
 for name in programming_lenguages.keys():
     if name in friends:
         print(f" {name} Hola es un gusto saber que te gusta: {programming_lenguages[name]}" )
@@ -75,16 +79,17 @@ print(programming_lenguages.keys())
 for key in programming_lenguages.keys():
     print(key)
 
+print()
+
 for key in sorted(programming_lenguages.keys()):
     print(key)
 
 print()    
 
 for lenguaje in programming_lenguages.values():
-    print(lenguaje)
-    
+    print(lenguaje)    
 print()
 
 
-for lenguaje in set(programming_lenguages.values()):
-    print(lenguaje)
+"""for lenguaje in set(programming_lenguages.values()):
+    print(lenguaje)"""
