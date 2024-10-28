@@ -60,6 +60,41 @@ programming_lenguages = {
 }
 print(programming_lenguages['enoc'].title())
 
+
+"""
+
+    Ejercicios.
+
+        1. Persona: Usa un diccionario para almacenar información sobre una 
+            persona que conoces. Guarda su nombre, apellido, edad y la ciudad
+            en la que vive. Deberías tener claves como nombre, apellido, edad y 
+            ciudad. Imprime cada pieza de información almacenada en tu 
+            diccionario.
+
+        2. Números Favoritos: Usa un diccionario para almacenar los números 
+            favoritos de varias personas. Piensa en cinco nombres y úsalos como
+            claves en tu diccionario. Piensa en un número favorito para cada 
+            persona y guárdalo como valor en tu diccionario. Imprime el nombre de
+            cada persona y su número favorito. Para hacerlo más divertido, 
+            encuesta a algunos amigos y obtén datos reales para tu programa.
+
+        3. Glosario: Un diccionario de Python puede usarse para modelar un 
+        diccionario real. Sin embargo, para evitar confusiones, llamémoslo 
+        glosario.
+
+            - Piensa en cinco palabras de programación que hayas aprendido en los 
+            capítulos anteriores. Usa estas palabras como claves en tu glosario y
+            guarda sus significados como valores.
+
+            - Imprime cada palabra y su significado en una salida bien formateada. 
+            Podrías imprimir la palabra seguida de dos puntos y luego su 
+            significado, o imprimir la palabra en una línea y su significado 
+            indentado en una segunda línea. Usa el carácter de nueva línea (\n) 
+            para insertar una línea en blanco entre cada par palabra-significado
+            en tu salida.
+
+"""
+
 for key, value in programming_lenguages.items():
     print(f"{key.title()} le gusta el lenguage:", value)
 
@@ -85,11 +120,84 @@ for key in sorted(programming_lenguages.keys()):
     print(key)
 
 print()    
-
+print()    
+print()    
+print("\n\n Clase de Conjuntos \n\n")
+print(programming_lenguages)
+print()    
 for lenguaje in programming_lenguages.values():
     print(lenguaje)    
 print()
 
 
-"""for lenguaje in set(programming_lenguages.values()):
-    print(lenguaje)"""
+for lenguaje in set(programming_lenguages.values()):
+    print(lenguaje)
+    
+
+"""
+    Ejercicios:
+    
+        1. Glosario 2: Ahora que sabes cómo recorrer un diccionario con un 
+            bucle, modifica el código del ejercicio anterior reemplazando tu 
+            serie de instrucciones print con un bucle que recorra las claves y
+            valores del diccionario. Cuando estés seguro de que tu bucle 
+            funciona, agrega cinco términos más de Python a tu glosario. Al 
+            ejecutar el programa nuevamente, estas nuevas palabras y sus 
+            significados deberían incluirse automáticamente en la salida.
+
+        2. Ríos: Crea un diccionario que contenga tres ríos importantes y el 
+        país por el que cada río fluye. Un par clave-valor podría ser 
+        'nilo': 'egipto'.
+
+            - Usa un bucle para imprimir una oración sobre cada río, como: El Nilo fluye por Egipto.
+            - Usa un bucle para imprimir el nombre de cada río incluido en el diccionario.
+            - Usa un bucle para imprimir el nombre de cada país incluido en el diccionario.
+
+"""
+"""
+    Nesting - Dictionaries in Lists
+"""
+covenant_elite = {'color': 'blue', 'puntos': 10}
+covenant_jackal = {'color': 'gray', 'puntos': 8}
+covenant_grunt = {'color': 'orange', 'puntos': 5}
+
+covenants = [covenant_elite, covenant_jackal, covenant_grunt]
+
+print("Covenants")
+print(covenants)
+
+for covenant in covenants:
+    print(covenant)
+    
+# Vamos a crear una flotilla de 30 covenants gruts
+covenant_fleet = []
+for _ in range(30):
+    new_covenant ={'color': 'orange', 'puntos': 5}
+    covenant_fleet.append(new_covenant)
+    
+print(covenant_fleet)
+print(len(covenant_fleet))
+
+"""
+    Listas en Diccionarios
+"""
+# Menú
+tacos = {
+    "tortillas": ['harina', 'maiz'],
+    "guisos": ['bistek', 'tripa', 'pastor']
+}
+
+print("Tu has ordenado unos tacos" + 
+      f"de {tacos['guisos'][0]} en tortilla de {tacos['tortillas'][1]}")
+
+## Imprimir los lenguales de cada persona
+favorite_games = {
+    "charly": ['fornite', 'halo', 'gearofwar'],
+    "gerry": ['free-fier', 'leadfordeath', 'fifa'],
+    "enoc": ['valorant', 'doom', 'minecraft']
+}
+
+for name, games in favorite_games.items():
+    print(name)
+    for game in games:
+        print("\t"+game.title())
