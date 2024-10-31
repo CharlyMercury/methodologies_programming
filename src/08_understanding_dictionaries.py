@@ -51,14 +51,14 @@ print(covenant_grunt)
 
 
 programming_lenguages = {
-    'enoc': 'c+',
-    'eliel': 'c++',
-    'fatima': 'escalera',
-    'alexandra': 'python',
-    'karim': 'java',
-    'griselda': 'python',
+    'frida': 'c++',
+    'rita': 'python',
+    'pedro': 'javascrip',
+    'gael': 'python',
+    'berenice': 'c',
+    'cesar': 'javascrip',
 }
-print(programming_lenguages['enoc'].title())
+print(programming_lenguages['frida'].title())
 
 
 """
@@ -101,7 +101,7 @@ for key, value in programming_lenguages.items():
 """
     Keys
 """
-friends = ['enoc', 'eliel']
+friends = ['frida', 'pedro']
 for name in programming_lenguages.keys():
     if name in friends:
         print(f" {name} Hola es un gusto saber que te gusta: {programming_lenguages[name]}" )
@@ -124,12 +124,12 @@ print()
 print()    
 print("\n\n Clase de Conjuntos \n\n")
 print(programming_lenguages)
-print()    
+print(" TOdos los valores ")    
 for lenguaje in programming_lenguages.values():
     print(lenguaje)    
 print()
 
-
+print(" Set ")    
 for lenguaje in set(programming_lenguages.values()):
     print(lenguaje)
     
@@ -184,20 +184,67 @@ print(len(covenant_fleet))
 # Menú
 tacos = {
     "tortillas": ['harina', 'maiz'],
-    "guisos": ['bistek', 'tripa', 'pastor']
+    "guisos": ['bistek', 'tripa', 'pastor'],
 }
 
-print("Tu has ordenado unos tacos" + 
-      f"de {tacos['guisos'][0]} en tortilla de {tacos['tortillas'][1]}")
+print("Tu has ordenado unos tacos " + 
+      f"de {tacos['guisos'][0]} en tortilla de {tacos['tortillas'][0]}")
 
 ## Imprimir los lenguales de cada persona
 favorite_games = {
-    "charly": ['fornite', 'halo', 'gearofwar'],
-    "gerry": ['free-fier', 'leadfordeath', 'fifa'],
-    "enoc": ['valorant', 'doom', 'minecraft']
+    "charly": ['fornite', 'halo', 'gearsofwar'],
+    "alan": ['apex', 'warzone', 'counterstrike'],
+    "valente": ['minecraft', 'rocketleague', 'blasphemous'],
+    'doria': ["valorant", 'blackops'],
 }
 
 for name, games in favorite_games.items():
     print(name)
     for game in games:
         print("\t"+game.title())
+        
+        
+"""
+    Dictionaries in dictionaries
+"""
+# Caso de uso Usernames en una aplicación web
+users = {
+    "charlymercury": {
+        "firstname": "Carlos",
+        "lastname": "Tovar",
+        "age": 32,
+        "height": 175,
+    }, 
+    "sujefa": {
+        "firstname": "Leo",
+        "lastname": "Castillo",
+        "age": 18,
+        "height": 165,
+    }, 
+    "boliche717171": {
+        "firstname": "Eduardo",
+        "lastname": "Zayas",
+        "age": 18,
+        "height": 182,
+    }, 
+}
+
+for user, user_info in users.items():
+    print(user)
+    full_name = user_info['firstname'] + " " + user_info['lastname']
+    print("\t ",full_name, "tiene: ", f"{user_info['age']} años.", " Y mide: " + str(user_info['height']))
+    
+"""
+    Request an api
+    Petición a una API
+"""
+import requests
+import json
+
+api_url = "https://pokeapi.co/api/v2/pokemon"
+
+response = requests.get(api_url)
+response_dict = response.json()
+pokemons_en_lista = response_dict['results']
+for pokemon in pokemons_en_lista:
+    print(pokemon)
