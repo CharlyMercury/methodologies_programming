@@ -8,22 +8,23 @@
     input(prompt) -> string
 
 """
-"""message = input("Escribe algo, y lo reimprimiré de nuevo para ti: ")
+"""
+message = input("Escribe algo, y lo reimprimiré de nuevo para ti: ")
+print(message)
+print(type(message))
+"""
+# Prompt para pedir un string
+"""prompt = " Introduce tu nombre: " 
+message = input(prompt)
 print(message)
 """
-
-"""# Prompt para pedir un string
-prompt = " Introduce tu nombre: "
-message = input(prompt)
-print(message)"""
-
-"""# Prompt para pedir un número
-prompt = "¿Cuál es tu edad?: "
-age = input(prompt)
+# Prompt para pedir un número
+"""prompt = "¿Cuál es tu edad?: "
+age = int(input(prompt))
 print(age)
 print(type(age))
-print(int(age)>=18)"""
-
+print(age>=18)
+"""
 
 """
 
@@ -40,31 +41,29 @@ if number%2==0:
 else:
     print(number, "es impar.")"""
 
-
-import time
-
-
 """
 
     While Loop
     
 """
+import time
 
 contador = 0
 
 while contador < 5:
     print("Charly")
+    time.sleep(0.1)
     contador += 1
-
 
 message = ""
 while message != 'salir':
     message = input("Si quiere salir, tipea salir: ")
+    print(message)
+   
     
-
 while True: 
-    print("Franco")
-    print("Gerry")
+    print("Alan")
+    print("Chema")
     prompt = "¿Quieres imprimir otro nombre?, escríbelo." +\
         "si quieres salir , tipea quit: "
     message = input(prompt)

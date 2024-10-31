@@ -235,16 +235,16 @@ for user, user_info in users.items():
     print("\t ",full_name, "tiene: ", f"{user_info['age']} años.", " Y mide: " + str(user_info['height']))
     
 """
-    Request an api
+    Request an api ->  pip install requests
     Petición a una API
 """
 import requests
-import json
 
-api_url = "https://pokeapi.co/api/v2/pokemon"
+api_url = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=151"
 
 response = requests.get(api_url)
 response_dict = response.json()
-pokemons_en_lista = response_dict['results']
-for pokemon in pokemons_en_lista:
-    print(pokemon)
+pokemons = response_dict['results']
+for pokemon in pokemons:
+    print(f"\t {pokemon['name']} \n ")
+    print(f"\t\t Disponible en: {pokemon['url']} \n ")
