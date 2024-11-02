@@ -224,6 +224,8 @@ for guiso in guisos_a_ordenar:
 
 """
 
+    Ejercicios.
+
     1. Hola Administrador: Haz una lista de cinco o más nombres de usuario, 
     incluyendo el nombre 'admin'. Imagina que estás escribiendo un código 
     que imprimirá un saludo a cada usuario después de que inicien sesión en un
