@@ -8,30 +8,31 @@
     input(prompt) -> string
 
 """
-"""
+
 message = input("Escribe algo, y lo reimprimiré de nuevo para ti: ")
 print(message)
 print(type(message))
-"""
+
 # Prompt para pedir un string
-"""prompt = " Introduce tu nombre: " 
+prompt = " Introduce tu nombre: " 
 message = input(prompt)
 print(message)
-"""
+
 # Prompt para pedir un número
-"""prompt = "¿Cuál es tu edad?: "
+prompt = "¿Cuál es tu edad?: "
 age = int(input(prompt))
 print(age)
 print(type(age))
 print(age>=18)
-"""
+
 
 """
 
     Operador Módulo
     
 """
-"""print(4%3)
+
+print(4%3)
 print(5%3)
 print(6%3)
 par_impar = "Introduce un número para decirte si es par o impar: "
@@ -39,7 +40,8 @@ number = int(input(par_impar))
 if number%2==0:
     print(number, "es par.")
 else:
-    print(number, "es impar.")"""
+    print(number, "es impar.")
+
 
 """
 
