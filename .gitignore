@@ -132,6 +132,8 @@ ENV/
 env.bak/
 venv.bak/
 
+src/esp32/ESP32_GENERIC-20241025-v1.24.0.bin
+
 # Spyder project settings
 .spyderproject
 .spyproject
