@@ -1,0 +1,13 @@
+awscrt==0.21.1
+awsiot==0.1.3
+awsiotsdk==1.22.0
+boto3==1.35.68
+botocore==1.35.68
+click==8.1.7
+colorama==0.4.6
+jmespath==1.0.1
+paho-mqtt==2.1.0
+python-dateutil==2.9.0.post0
+s3transfer==0.10.4
+six==1.16.0
+urllib3==2.2.3
