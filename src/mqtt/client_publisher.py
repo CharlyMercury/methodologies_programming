@@ -9,5 +9,5 @@ def on_connect(client, userdata, flags, reason_code, properties):
 mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 mqttc.on_connect = on_connect
 
-mqttc.connect("192.168.0.104", 1883, 60)
-mqttc.publish("temperatura1", "DESDE PYTHON")
+mqttc.connect("broker.hivemq.com", 1883, 60)
+mqttc.publish("temperatura", "holi")
