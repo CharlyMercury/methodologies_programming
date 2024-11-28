@@ -5,8 +5,8 @@ import paho.mqtt.client as mqtt
 # También se hacen las suscripciones a tópicos
 def on_connect(client, userdata, flags, reason_code, properties):
     topico_temperatura = "temperatura"
-    print(f"Connected with result code {reason_code}")
-    client.subscribe(topico_temperatura)
+    print(f"Successfully Connected with result code {reason_code}")
+    client.subscribe(topico_temperatura, qos=1)
     print(f"Me suscribí al tópico {topico_temperatura}")
 
 

@@ -5,7 +5,7 @@
 :: Fecha: 19/11/24
 
 :: Configuración Inicial
-set PORT=COM5
+set PORT=COM4
 set CHIP=esp32
 set BAUD=460800
 set BIN_PATH=.\ESP32_GENERIC-20241025-v1.24.0.bin
@@ -16,7 +16,7 @@ echo.
 echo -------------------------
 echo Activando Environment
 echo -------------------------
-call .\venv\Scripts\activate.bat
+call ..\..\venv\Scripts\activate.bat
 echo.
 echo.
 echo.
@@ -58,7 +58,20 @@ echo.
 echo [Paso 3] Subiendo archivos Python al ESP32...
 echo.
 cd src
-ampy --port COM5 put main.py
+
+ampy --port %PORT% put device_cert.crt
+echo [Paso 3.1] device cert uploaded
+ampy --port %PORT% put private.key
+echo [Paso 3.2] private key uploaded
+ampy --port %PORT% put root.pem
+echo [Paso 3.2] root uploaded
+ampy --port %PORT% put main.py
+echo [Paso 3.4] main script uploaded
+ampy --port %PORT% put simple.py
+echo [Paso 3.5] simple.py uploaded
+ampy --port %PORT% put mh_z19.py
+echo [Paso 3.5] mh_z19.py uploaded
+
 
 echo.
 echo ================================================

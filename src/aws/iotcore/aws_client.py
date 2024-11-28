@@ -20,11 +20,10 @@ received_all_event = threading.Event()
 
 class AwsMqttClient():
 
-    def __init__(self, endpoint_, port_, cert_, key_, ca_, client_id_, topics_, parameters, proxy_host=None, proxy_port=None):
+    def __init__(self, endpoint_, port_, cert_, key_, ca_, client_id_, topics_, proxy_host=None, proxy_port=None):
 
         self.topics = topics_
         self.count = 0
-        self.raspberry = parameters["raspberry"]
 
         proxy_options = None
         if proxy_host is not None and proxy_port != 0:

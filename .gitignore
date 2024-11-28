@@ -7,6 +7,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+
+### Certificates ###
+*.pem
+*.crt
+*.key
+
+### Micropython """
+*.bin
+
 # C extensions
 *.so
 
