@@ -1,26 +1,56 @@
-"""
-
-    pip install speechrecognition
-    pip install pyaudio
-    
-"""
-
-import speech_recognition as speech_rc
+from openai import OpenAI
+import pyaudio
+import wave
+from dotenv import load_dotenv
+import os
 
 
-## Inicializar el reconocimiento de voz
-recognizer = speech_rc.Recognizer()
+CHUNK = 1024
+FORMAT = pyaudio.paInt16
+CHANNELS = 2
+RATE = 44100
+RECORD_SECONDS = 5
+WAVE_OUTPUT_FILENAME = "output.wav"
 
-## Inicializar micrófono
-with speech_rc.Microphone() as source:
-    print("Dí algo")
-    audio = recognizer.listen(source)
-    
+p = pyaudio.PyAudio()
 
-try:
-    text = recognizer.recognize_google(audio, language="es-Es")
-    print("Texto reconocido: " + text)
-except speech_rc.UnknownValueError as err:
-    print(f"No se reconocidió el audio {err} ")
-except speech_rc.RequestError as err:
-    print(f"Error en la solicitud {err}")    
+stream = p.open(format=FORMAT,
+                channels=CHANNELS,
+                rate=RATE,
+                input=True,
+                frames_per_buffer=CHUNK)
+
+print("* recording")
+
+frames = []
+
+for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
+    data = stream.read(CHUNK)
+    frames.append(data)
+
+print("* done recording")
+
+stream.stop_stream()
+stream.close()
+p.terminate()
+
+wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
+wf.setnchannels(CHANNELS)
+wf.setsampwidth(p.get_sample_size(FORMAT))
+wf.setframerate(RATE)
+wf.writeframes(b''.join(frames))
+wf.close()
+
+
+load_dotenv()
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+
+client = OpenAI()
+
+audio_file = open("output.wav", "rb")
+transcription = client.audio.transcriptions.create(
+  model="whisper-1", 
+  file=audio_file, 
+  response_format="text"
+)
+print(transcription.text)

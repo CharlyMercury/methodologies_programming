@@ -6,7 +6,7 @@
 import os
 import time
 import ujson
-import dht
+'import dht'
 from machine import Pin
 import network
 from simple import MQTTClient
@@ -106,7 +106,7 @@ try:
     mqtt.set_callback(mqtt_subscribe)   
     mqtt.subscribe(topic_sub)
 except Exception as err:
-    print("Unable to connect to MQTT.", err)
+    print("Unable to connect to AWS.", err)
 
 
 while True:

@@ -48,11 +48,11 @@ class AwsMqttClient():
             on_connection_failure=self.on_connection_failure,
             on_connection_closed=self.on_connection_closed)
 
-        # print(f"Connecting to {endpoint_} with client ID '{client_id_}'...")
+        print(f"Connecting to {endpoint_} with client ID '{client_id_}'...")
         connect_future = self.mqtt_connection.connect()
         # Future.result() waits until a result is available
         connect_future.result()
-        # print("Connected!")
+        print("Connected!")
 
     # Callback when connection is accidentally lost.
     def on_connection_interrupted(self, connection, error, **kwargs):
