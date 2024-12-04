@@ -6,7 +6,7 @@
 import os
 import time
 import ujson
-'import dht'
+import dht
 from machine import Pin
 import network
 from simple import MQTTClient
@@ -14,10 +14,10 @@ import mh_z19
 
 
 #Enter your wifi SSID and password below.
-wifi_ssid = "IZZI-B10C-5G"
-wifi_password = "hHqKtA2cGf232RJJYA"
-# wifi_ssid = "IZZI-9B1D"
-# wifi_password = "Cga6RtdGbEL3"
+# wifi_ssid = "IZZI-B10C-5G"
+# wifi_password = "hHqKtA2cGf232RJJYA"
+wifi_ssid = "Totalplay-2.4G-fee0"
+wifi_password = "UUuQkjdK56LGPyjX"
 
 #Enter your AWS IoT endpoint. You can find it in the Settings page of
 #your AWS IoT Core console. 
