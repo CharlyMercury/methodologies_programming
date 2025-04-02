@@ -5,10 +5,10 @@
 :: Fecha: 19/11/24
 
 :: Configuración Inicial
-set PORT=COM4
+set PORT=COM3
 set CHIP=esp32
 set BAUD=460800
-set BIN_PATH=.\ESP32_GENERIC-20241025-v1.24.0.bin
+set BIN_PATH=.\ESP32_GENERIC-20241129-v1.24.1.bin
 
 echo.
 echo.

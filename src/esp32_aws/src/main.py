@@ -21,11 +21,11 @@ wifi_password = "UUuQkjdK56LGPyjX"
 
 #Enter your AWS IoT endpoint. You can find it in the Settings page of
 #your AWS IoT Core console. 
-aws_endpoint = b'a1svajesngnqg2-ats.iot.us-east-1.amazonaws.com'
+aws_endpoint = b'a21xc2x2m4yaib-ats.iot.us-east-1.amazonaws.com'
 
 #If you followed the blog, these names are already set.
-thing_name = "thing_esp32"
-client_id = "esp32-charly"
+thing_name = "Prueba_embeeded_systems"
+client_id = "Prueba_embeeded_systems"
 private_key = "private.key"
 device_cert = "device_cert.crt"
 cacert_cert = "root.pem"
