@@ -45,20 +45,22 @@ elif covenant_grunt['speed'] == 'medium':
 else:
     x_increment = 20
 
-covenant_grunt['x-position'] = covenant_grunt['x-position'] + x_increment
+covenant_grunt['x-position'] = \
+    covenant_grunt['x-position'] + \
+    x_increment
 
 print(covenant_grunt)
 
 
 programming_lenguages = {
-    'frida': 'c++',
-    'rita': 'python',
-    'pedro': 'javascrip',
-    'gael': 'python',
-    'berenice': 'c',
+    'alan': 'c++', 
+    'chuy': 'python',
+    'victor': 'javascrip',
+    'gil': 'python',
+    'mau': 'c',
     'cesar': 'javascrip',
 }
-print(programming_lenguages['frida'].title())
+print(programming_lenguages['alan'].title())
 
 
 """
@@ -101,7 +103,7 @@ for key, value in programming_lenguages.items():
 """
     Keys
 """
-friends = ['frida', 'pedro']
+friends = ['gil', 'angel']
 for name in programming_lenguages.keys():
     if name in friends:
         print(f" {name} Hola es un gusto saber que te gusta: {programming_lenguages[name]}" )
@@ -119,6 +121,10 @@ print()
 for key in sorted(programming_lenguages.keys()):
     print(key)
 
+# set() para conjuntos {}
+# dict() para diccionarios {"key": value}
+# list() para listas
+# tuple() para tuplas
 print()    
 print()    
 print()    
@@ -215,9 +221,9 @@ users = {
         "age": 32,
         "height": 175,
     }, 
-    "sujefa": {
-        "firstname": "Leo",
-        "lastname": "Castillo",
+    "maugmr": {
+        "firstname": "Mauricio",
+        "lastname": "Ramos",
         "age": 18,
         "height": 165,
     }, 

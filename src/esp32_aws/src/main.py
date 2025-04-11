@@ -96,7 +96,10 @@ def mqtt_subscribe(topic, msg):
     print("Done")
 
 def led_state(message):
+    print(message['state']['led']['onboard'])
     led.value(message['state']['led']['onboard'])
+
+# {"state":{"led":{"onboard":1}}}
 
 #We use our helper function to connect to AWS IoT Core.
 #The callback function mqtt_subscribe is what will be called if we 
